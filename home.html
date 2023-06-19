@@ -7,58 +7,57 @@
     <link rel = "stylesheet" href="second.css"/> 
 </head>
 <body>
-    <header class= "Navigation">
-        EasyBlog
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Bookmarks</a></li>
-            <li><a href="#">Calendar</a></li>
+    <header class= "navigation">
+        <h1 class="nav_head"> EasyBlog</h1>
+        <ul class="nav2">
+                <li class="nav3"><a class= "nav4" href="#">Home</a></li>
+                <li class="nav3"><a class= "nav4" href="#">Bookmarks</a></li>
+                <li class="nav3"><a class= "nav4" href="#">Calendar</a></li> 
         </ul>
     </header>
-    <main>
+    <main class="main">
         <section>
-            <h1>Add Post Here</h1>
+            <h1>Add Post Here:</h1>
              <form action="/crest" class = "form" method="post">
                 <p class = "form_par">
-                <label class="label" for ="post_creator">Add Here:</label>
-                <textarea class= "poster" type= "text" name = "post" id="post_creator"> </textarea>
+                <textarea class= "poster" aria-label="Add Here"type= "text" name = "post" id="post_creator"> </textarea>
                 </p>
                 
                 
-                <button type = "submit">Post</button>
+                <button type = "submit" class= "button">Post</button>
 
 
              </form>
         </section>
         <section>
-            <h1>Recent Post Here</h1> 
-            <article>
+            <h1>Recent Posts Here</h1> 
+            <article class="poster1">
                 <div>
-                <h3>Today was a good day</h3>
-                <time datetime="12-04-2022">June 19</time>
+                <h3 class= "poster_title">Today was a good day</h3>
+                <time class= "poster_date"datetime="12-04-2022">(June 19)</time>
             </div>
                 
-            <p1>
+            <p1 class="poster_content">
                 I was trying to get into a groove and disciplin myself. Thank You for everyone who joined.
             </p1>
             </article>
             
-        </section>
+        </section> 
     </main>
 
     <footer class = "footer"> 
-        <div>
-            <section class= "right">
-                
-                <a href="#"> Made by Fanuel Dana</a>
-                <a href="#"> About</a>
-
-            </section>
+        <div class= "footer_content">
             <section class= "left">
                 
-                <a href="#">Home</a>
-                <a href="#">Bookmarks</a>
-                <a href="#">Calendar</a>
+                <a class="footer_items"> Made by Fanuel Dana</a>
+                <a class="footer_items"> About</a>
+
+            </section>
+            <section class= "right">
+                
+                <a class= "right_items" >Home</a>
+                <a class= "right_items" >Bookmarks</a>
+                <a class= "right_items" >Calendar</a>
 
             </section>
            

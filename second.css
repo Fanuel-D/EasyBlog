@@ -1,0 +1,151 @@
+html{
+    font-family: Lato, sans-serif;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+.navigation{
+
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px;
+    
+}
+
+.nav_head{
+    color: rgb(38, 110, 110);
+    font-size: 60px;
+}
+
+
+.nav2{
+    display: flex;
+    align-items: center;
+    text-align: right;
+    list-style: none;
+    color: darkslategrey;
+    padding: 0;
+  
+
+}
+.nav3{
+   margin-left: 30px;
+}
+.nav4{
+    text-decoration: none;
+    color: inherit;
+}
+
+.main{
+    max-width: 900px;
+    margin:0 auto;
+    padding: 0 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form_par{
+    width: 100%;
+}
+.label{
+    display: block;
+    margin-bottom: 10px;
+}
+.poster{
+    width: inherit;
+    font-size: 20px;
+    padding: 40px 15px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(140, 195, 195);
+}
+
+.button{
+    background-color: rgb(137, 176, 176);
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 5px 30px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color:  rgb(161, 195, 195);
+}
+.poster1{
+    margin-top: 25px;
+}
+
+.poster_title{
+    display: inline;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.poster_content{
+    
+    font-size: 20px;
+    line-height: 150%;
+}
+.footer{
+    background-color: #06615b;
+    padding: 40px 0;
+    margin-top: 50px;
+    border-top: 4px solid black;
+    color: white;
+    font-size: 15px;
+    
+}
+
+.footer_content{
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.right{
+    flex-grow: 2;
+    margin-left: 50px;
+}
+
+.footer_items{
+    margin-bottom: 5px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.right_items{
+    margin-left: 50px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.right_items:hover{
+    text-decoration: underline;
+}
+
+.footer_items:hover{
+    text-decoration: underline;
+}
