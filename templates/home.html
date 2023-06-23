@@ -18,7 +18,7 @@
     <main class="main">
         <section>
             <h1>Add Post Here:</h1>
-             <form action="/crest" class = "form" method="post">
+             <form class = "form" method="post">
                 <p class = "form_par">
                 <textarea class= "poster" aria-label="Add Here"type= "text" name = "post" id="post_creator"> </textarea>
                 </p>
@@ -30,18 +30,19 @@
              </form>
         </section>
         <section>
-            <h1>Recent Posts Here</h1> 
+            <h1>Recent Posts</h1> 
+            {% for entry in entries %}
             <article class="poster1">
                 <div>
-                <h3 class= "poster_title">Today was a good day</h3>
-                <time class= "poster_date"datetime="12-04-2022">(June 19)</time>
+                <h3 class= "poster_title">{{ entry[0] | truncate(30,true)}}</h3>
+                <time class= "poster_date"datetime="{{entry[1]}}">[{{entry[2]}}]</time>
             </div>
                 
             <p1 class="poster_content">
-                I was trying to get into a groove and disciplin myself. Thank You for everyone who joined.
+              {{entry[0]}}
             </p1>
             </article>
-            
+            {% endfor %}
         </section> 
     </main>
 
