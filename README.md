@@ -6,6 +6,6 @@ This blogging website allows you to manage your blog posts with ease. The fronte
 * User is able to create and view blog posts.
 * User is able to view old posts using a simple easy-to-use calendar UI on a separate tab.
 * User is able to seamlessly transition between tabs.
-<img> ![](https://github.com/Fanuel-D/EasyBlog/blob/main/assets/Screenshot%202023-06-24%20at%204.49.50%20PM.png)
+<img width =400> ![](https://github.com/Fanuel-D/EasyBlog/blob/main/assets/Screenshot%202023-06-24%20at%204.49.50%20PM.png)
 
 
