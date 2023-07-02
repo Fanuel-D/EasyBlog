@@ -4,19 +4,43 @@
     <meta charset='utf-8' />
     <title>calendar</title>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
+          initialView: 'dayGridMonth',
+          dateClick: function(info) {
+            var clickedDate = info.dateStr;
+            $.ajax({
+              type: "GET",
+              url: "/posts",
+              data: { date: clickedDate },
+              success: function(response) {
+                // Clear previous posts
+                $("#post-container").empty();
+                // Iterate over the response and display the posts
+                for (var i = 0; i < response.length; i++) {
+                  var post = response[i];
+                  var postHtml = "<div class='post'>" +
+                                 "<h3>" + post.date + "</h3>" +
+                                 "<p>" + post.post + "</p>" +
+                                 "</div>";
+                  $("#post-container").append(postHtml);
+                }
+              },
+              error: function(xhr) {
+                console.log(xhr.responseText);
+              }
+            });
+          }
         });
         calendar.render();
       });
-
     </script>
   </head>
   <body>
     <div id='calendar'></div>
+    <div id='post-container'></div>
   </body>
 </html>
