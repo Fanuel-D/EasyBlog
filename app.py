@@ -13,7 +13,6 @@ def create_app():
 
 
     @app.route("/", methods = ["GET", "POST"])
-
     def home():
 
         if request.method == "POST":
@@ -27,4 +26,13 @@ def create_app():
             for entry in app.db.entries.find({})
         ]
         return render_template("home.html", entries = entries_format)
+    @app.route("/calendar")
+    def calendar():
+     
+        return render_template('cal.html')
+
+    @app.route("/bookmarks")
+    def bookmarks():
+       
+        return render_template('bookmarks.html')
     return app
