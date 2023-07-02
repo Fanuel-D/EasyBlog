@@ -39,9 +39,9 @@ def get_posts():
     return jsonify(response)
 
 
-@app.route("/bookmarks")
-def bookmarks():
-    return render_template('bookmarks.html')
+@app.route("/favourites")
+def favourites():
+    return render_template('favourites.html')
 
 
 if __name__ == '__main__':

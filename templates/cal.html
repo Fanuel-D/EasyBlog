@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <meta charset='utf-8' />
+    <meta charset="UTF-8" />
     <title>calendar</title>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
+      html{
+        font-family: Lato, sans-serif;
+      }
+      *,
+      *::after,
+      *::before{
+          box-sizing: inherit;
+      }
+      body {
+          box-sizing: border-box;
+          margin: 0;
+      }
       #calendar {
         max-width: 400px; /* Set the desired width value here */
         margin: 0 auto;
@@ -16,6 +28,40 @@
         padding: 10px;
         background-color: #f5f5f5;
       }
+      .navigation{
+
+        max-width: 700px;
+        margin: 50px auto;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 24px;
+      }
+      .nav_head{
+      color: rgb(38, 110, 110);
+      font-size: 60px;
+      }
+
+      .nav2{
+          display: flex;
+          align-items: center;
+          text-align: right;
+          list-style: none;
+          color: darkslategrey;
+          padding: 0;
+        
+
+      }
+      .nav3{
+        margin-left: 30px;
+      }
+      .nav4{
+          text-decoration: none;
+          color: inherit;
+      }
+
+
     </style>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -52,6 +98,14 @@
     </script>
   </head>
   <body>
+    <header class= "navigation">
+      <h1 class="nav_head"> EasyBlog</h1>
+      <ul class="nav2">
+              <li class="nav3"><a class= "nav4" href="/">Home</a></li>
+              <li class="nav3"><a class= "nav4" href="/favourites">Favourites</a></li>
+              <li class="nav3"><a class= "nav4" href="/calendar">Calendar</a></li> 
+      </ul>
+  </header>
     <div id='calendar'></div>
     <div id='post-container'></div>
   </body>
